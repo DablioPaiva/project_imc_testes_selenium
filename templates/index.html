@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcular IMC</title>
+</head>
+<body>
+<form action="calcular/" method="post">
+
+
+    {% csrf_token %}
+    <label>Sexo:</label>
+    <br>
+    <input type="radio" id="sexo" name="feminino" value="feminino">
+    <label for="feminino">Feminino</label><br>
+
+    <input type="radio" id="sexo" name="masculino" value="masculino">
+    <label for="masculino">Masculino</label><br>
+
+    <br>
+    <label>Altura:</label>
+    <input type="number" name="altura"step="0.01" required>
+    <br>
+    <label>Peso:</label>
+    <input type="number" name="peso" step="0.01" required>
+    <br>
+    <button type="submit" value="Calcular"></button>
+
+</form>
+
+</body>
+</html>
